@@ -2,6 +2,7 @@ package com.wushang.edu.web.controller;
 
 import com.wushang.edu.model.User;
 import com.wushang.edu.service.IUserService;
+import com.wushang.edu.web.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("user")
-public class UserController {
+public class UserController extends BaseController<User> {
 
 	@Autowired
 	private IUserService userService;

@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class UserServiceImpl extends BaseServiceImpl<User> implements IUserService {
+
 	@Override
 	public User login(String username, String password) {
 		return null;
@@ -23,7 +24,7 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
 
 	@Override
 	public User findById(Integer id) {
-		User user = userMapper.findById(id);
+		User user = userMapper.selectByPrimaryKey(id);
 		return user;
 	}
 
